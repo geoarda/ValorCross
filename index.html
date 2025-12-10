@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Crosshair Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sol Menü -->
+    <aside class="sidebar">
+        <h2>Presets</h2>
+        <button class="preset-btn">Yay</button>
+        <button class="preset-btn">Radiant</button>
+        <button class="preset-btn">Troll</button>
+        <button class="preset-btn random">🎲 Random</button>
+        <div class="preset-list">
+            <!-- Dinamik olarak doldurursun -->
+        </div>
+    </aside>
+
+    <!-- Orta Ayar Paneli -->
+    <main class="panel">
+        <h2>Crosshair Ayarları</h2>
+
+        <label>Renk</label>
+        <input type="color" id="colorPicker">
+
+        <label>Kalınlık</label>
+        <input type="range" min="0" max="10" value="2" id="thickness">
+
+        <label>Uzunluk</label>
+        <input type="range" min="0" max="20" value="10" id="length">
+
+        <label>Boşluk</label>
+        <input type="range" min="0" max="20" value="4" id="gap">
+
+        <label>Outline</label>
+        <input type="checkbox" id="outline">
+
+        <label>Orta Nokta</label>
+        <input type="checkbox" id="dot">
+
+        <div class="btn-row">
+            <button class="action-btn" id="generate">Kodu Üret</button>
+            <button class="action-btn" id="copyCode">Kodu Kopyala</button>
+        </div>
+
+        <textarea id="output" placeholder="Kod burada görünecek..."></textarea>
+    </main>
+
+    <!-- Sağ Ön İzleme -->
+    <section class="preview">
+        <div id="crosshairPreview"></div>
+        <p>Önizleme – Tam ekran değildir, sadece görsel temsil</p>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
